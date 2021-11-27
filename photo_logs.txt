@@ -1,0 +1,2 @@
+fswebcam /home/pi/Documents/motionDetectionProject/unknown_faces/1637997985.7626016.jpg
+fswebcam /home/pi/Documents/motionDetectionProject/unknown_faces/1637997987.7647462.jpg

@@ -10,7 +10,7 @@ PIRSensePin = 4
 LED1Pin = 17
 LED2Pin = 22
 ButtonPin = 26
-LOG_FILE_NAME = "/home/pi/Documents/motionDetectionProject/pictures/photo_logs.txt"
+LOG_FILE_NAME = "/home/pi/Documents/motionDetectionProject/photo_logs.txt"
 
 
 
@@ -35,7 +35,7 @@ print(">Initalization complete")
     
 def takePhoto():
     t = str(time.time())
-    name = "fswebcam /home/pi/Documents/motionDetectionProject/pictures/" + t + ".jpg"
+    name = "fswebcam /home/pi/Documents/motionDetectionProject/unknown_faces/" + t + ".jpg"
     os.system(name)
     with open(LOG_FILE_NAME, "a") as d:
         d.write(name)

@@ -1,8 +1,8 @@
 from flask import Flask, redirect, url_for, render_template, jsonify, request
 import os, test
 
-CAMERA_FOLDER_PATH = "/home/pi/Documents/motionDetectionProject/pictures"
-LOG_FILE_NAME = CAMERA_FOLDER_PATH + "/photo_logs.txt"
+CAMERA_FOLDER_PATH = "/home/pi/Documents/motionDetectionProject/unknown_faces"
+LOG_FILE_NAME = "/home/pi/Documents/motionDetectionProject/photo_logs.txt"
 photoCount = 0
 #front end
 
@@ -18,7 +18,7 @@ def testing():
 
 @app.route("/deletePic/")
 def delete():
-    dir = "/home/pi/Documents/motionDetectionProject/pictures"
+    dir = "/home/pi/Documents/motionDetectionProject/unknown_faces"
     for f in os.listdir(dir):
             os.remove(os.path.join(dir, f))
     return "Deletion Successful" + "\n" + "<a href='/'>Home</a>"
