@@ -57,6 +57,9 @@ try:
         else:
             GPIO.output(LED1Pin, GPIO.LOW)
         if(GPIO.input(ButtonPin) == 1):
+            print("wiping pictures memory")
+            delCMD = "rm -v /home/pi/Documents/motionDetectionProject/unknown_faces/*"
+            os.system(delCMD)
             print("cleaning up GPIO")
             GPIO.cleanup()
             break
